@@ -43,6 +43,7 @@ mutation CreateRoomUser(
     id
     userId
     roomId
+    userName
     createdAt
     updatedAt
   }
@@ -55,6 +56,7 @@ mutation UpdateRoomUser(
     id
     userId
     roomId
+    userName
     createdAt
     updatedAt
   }
@@ -67,6 +69,7 @@ mutation DeleteRoomUser(
     id
     userId
     roomId
+    userName
     createdAt
     updatedAt
   }

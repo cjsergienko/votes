@@ -8,6 +8,7 @@ type RoomUser @model @auth(rules: [{allow: public}]) {
   id: ID!
   userId: ID
   roomId: ID
+  userName: String
 }
 
 type Room @model @auth(rules: [{allow: public}]) {

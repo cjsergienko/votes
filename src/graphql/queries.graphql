@@ -29,6 +29,7 @@ query GetRoomUser($id: ID!) {
     id
     userId
     roomId
+    userName
     createdAt
     updatedAt
   }
@@ -43,6 +44,7 @@ query ListRoomUsers(
       id
       userId
       roomId
+      userName
       createdAt
       updatedAt
     }

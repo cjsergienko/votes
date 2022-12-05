@@ -122,11 +122,13 @@ export type CreateRoomUserInput = {
   id?: string | null;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
 };
 
 export type ModelRoomUserConditionInput = {
   userId?: ModelIDInput | null;
   roomId?: ModelIDInput | null;
+  userName?: ModelStringInput | null;
   and?: Array<ModelRoomUserConditionInput | null> | null;
   or?: Array<ModelRoomUserConditionInput | null> | null;
   not?: ModelRoomUserConditionInput | null;
@@ -137,6 +139,7 @@ export type RoomUser = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -145,6 +148,7 @@ export type UpdateRoomUserInput = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
 };
 
 export type DeleteRoomUserInput = {
@@ -294,6 +298,7 @@ export type ModelRoomUserFilterInput = {
   id?: ModelIDInput | null;
   userId?: ModelIDInput | null;
   roomId?: ModelIDInput | null;
+  userName?: ModelStringInput | null;
   and?: Array<ModelRoomUserFilterInput | null> | null;
   or?: Array<ModelRoomUserFilterInput | null> | null;
   not?: ModelRoomUserFilterInput | null;
@@ -405,6 +410,7 @@ export type ModelSubscriptionRoomUserFilterInput = {
   id?: ModelSubscriptionIDInput | null;
   userId?: ModelSubscriptionIDInput | null;
   roomId?: ModelSubscriptionIDInput | null;
+  userName?: ModelSubscriptionStringInput | null;
   and?: Array<ModelSubscriptionRoomUserFilterInput | null> | null;
   or?: Array<ModelSubscriptionRoomUserFilterInput | null> | null;
 };
@@ -471,6 +477,7 @@ export type CreateRoomUserMutation = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -480,6 +487,7 @@ export type UpdateRoomUserMutation = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -489,6 +497,7 @@ export type DeleteRoomUserMutation = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -622,6 +631,7 @@ export type GetRoomUserQuery = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -633,6 +643,7 @@ export type ListRoomUsersQuery = {
     id: string;
     userId?: string | null;
     roomId?: string | null;
+    userName?: string | null;
     createdAt: string;
     updatedAt: string;
   } | null>;
@@ -755,6 +766,7 @@ export type OnCreateRoomUserSubscription = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -764,6 +776,7 @@ export type OnUpdateRoomUserSubscription = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -773,6 +786,7 @@ export type OnDeleteRoomUserSubscription = {
   id: string;
   userId?: string | null;
   roomId?: string | null;
+  userName?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -968,6 +982,7 @@ export class APIService {
           id
           userId
           roomId
+          userName
           createdAt
           updatedAt
         }
@@ -993,6 +1008,7 @@ export class APIService {
           id
           userId
           roomId
+          userName
           createdAt
           updatedAt
         }
@@ -1018,6 +1034,7 @@ export class APIService {
           id
           userId
           roomId
+          userName
           createdAt
           updatedAt
         }
@@ -1387,6 +1404,7 @@ export class APIService {
           id
           userId
           roomId
+          userName
           createdAt
           updatedAt
         }
@@ -1412,6 +1430,7 @@ export class APIService {
             id
             userId
             roomId
+            userName
             createdAt
             updatedAt
           }
@@ -1736,6 +1755,7 @@ export class APIService {
           id
           userId
           roomId
+          userName
           createdAt
           updatedAt
         }
@@ -1762,6 +1782,7 @@ export class APIService {
           id
           userId
           roomId
+          userName
           createdAt
           updatedAt
         }
@@ -1788,6 +1809,7 @@ export class APIService {
           id
           userId
           roomId
+          userName
           createdAt
           updatedAt
         }

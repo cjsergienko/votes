@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { APIService, RoomUser, RoomQuestion, Room, ListRoomQuestionsQuery, ListRoomUsersQuery } from '../API.service';
+import { APIService, Room, ListRoomQuestionsQuery, ListRoomUsersQuery } from '../API.service';
 import { ActivatedRoute } from "@angular/router";
 import { Subscription } from 'rxjs';
 import { constants } from './constants';
@@ -21,7 +21,7 @@ export class RoomComponent implements OnInit {
   constructor(private api: APIService, private route: ActivatedRoute) {
     this.routeSub = this.route.params.subscribe(params => {
       localStorage.setItem('room_id', params['id']);
-      this.initializeUser();
+      this.createUser();
       this.getRoomQuestions();
     });
   }
@@ -30,31 +30,17 @@ export class RoomComponent implements OnInit {
     this.interval = setInterval(() => this.getOnlineUsers(), 1000);
   }
 
-  private initializeUser() {
-    const userId = localStorage.getItem('user_id');
-    if(!userId) {
-      this.api.CreateUser({
-        id: this.generateId(),
-        name: this.generateName()
-      }).then((response) => {
-        localStorage.setItem('user_id', response['id']);
-        console.log('User created: ', response);
-        this.addUserToRoom();
-      });
-    } else {
-      this.addUserToRoom();
-    }
-  }
-
-  private addUserToRoom() {
+  private createUser() {
     this.api.ListRoomUsers({
-        roomId: { contains: localStorage.getItem('room_id') },
-        userId: { contains: localStorage.getItem('user_id')}
-      }).then((roomUsers) => {
-        if(!roomUsers.items.length) {
-          this.api.CreateRoomUser({userId: localStorage.getItem('user_id'), roomId: localStorage.getItem('room_id')}).then((roomUser) => {
+      roomId: { contains: localStorage.getItem('room_id') },
+      userId: { contains: localStorage.getItem('user_id')}
+    }).then((roomUsers) => {
+      if(!roomUsers.items.length) {
+        this.api.CreateRoomUser({
+          userId: localStorage.getItem('user_id'),
+          roomId: localStorage.getItem('room_id')}).then((roomUser) => {
             console.log('User added to the room: ', roomUser);
-        });
+          });
       }
     });
   }

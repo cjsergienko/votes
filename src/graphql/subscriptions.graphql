@@ -37,6 +37,7 @@ subscription OnCreateRoomUser($filter: ModelSubscriptionRoomUserFilterInput) {
     id
     userId
     roomId
+    userName
     createdAt
     updatedAt
   }
@@ -46,6 +47,7 @@ subscription OnUpdateRoomUser($filter: ModelSubscriptionRoomUserFilterInput) {
     id
     userId
     roomId
+    userName
     createdAt
     updatedAt
   }
@@ -55,6 +57,7 @@ subscription OnDeleteRoomUser($filter: ModelSubscriptionRoomUserFilterInput) {
     id
     userId
     roomId
+    userName
     createdAt
     updatedAt
   }

@@ -1,0 +1,19 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      - npm i
+      - npm i -g @aws-amplify/cli
+      - amplifyPush --simple
+    # IMPORTANT - Please verify your build commands
+    build:
+      commands: [
+        - yarn start
+      ]
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths: []
