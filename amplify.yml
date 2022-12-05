@@ -7,9 +7,8 @@ frontend:
       - amplifyPush --simple
     # IMPORTANT - Please verify your build commands
     build:
-      commands: [
+      commands:
         - ng serve
-      ]
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
