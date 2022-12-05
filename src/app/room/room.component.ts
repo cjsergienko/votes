@@ -38,9 +38,11 @@ export class RoomComponent implements OnInit {
       if(!roomUsers.items.length) {
         this.api.CreateRoomUser({
           userId: localStorage.getItem('user_id'),
-          roomId: localStorage.getItem('room_id')}).then((roomUser) => {
+          roomId: localStorage.getItem('room_id'),
+          userName: this.generateName()
+        }).then((roomUser) => {
             console.log('User added to the room: ', roomUser);
-          });
+        });
       }
     });
   }
@@ -74,7 +76,7 @@ export class RoomComponent implements OnInit {
   }
 
   private generateName():string {
-    let names = ['Apple', 'Banana', 'Mango', 'Orange', 'Watermelon', 'Pear']; // array
+    let names = ['Apple Mess', 'Banana Boy', 'Mango Burger', 'Orange Man', 'Watermelon Day', 'Pear in the air']; // array
     let index = Math.floor(Math.random() * names.length);
     console.log('username: ', names[index]);
     return names[index];
