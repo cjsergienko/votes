@@ -1,0 +1,34 @@
+type RoomQuestion @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  roomId: ID
+  questionId: ID
+}
+
+type RoomUser @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userId: ID
+  roomId: ID
+}
+
+type Room @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+
+type Question @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  text: String!
+  roomId: ID
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+}
+
+type Vote @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userId: ID!
+  roomId: ID
+  questionId: ID
+}
+ 

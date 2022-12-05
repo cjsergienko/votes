@@ -1,0 +1,163 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateRoomQuestion(
+  $filter: ModelSubscriptionRoomQuestionFilterInput
+) {
+  onCreateRoomQuestion(filter: $filter) {
+    id
+    roomId
+    text
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateRoomQuestion(
+  $filter: ModelSubscriptionRoomQuestionFilterInput
+) {
+  onUpdateRoomQuestion(filter: $filter) {
+    id
+    roomId
+    text
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteRoomQuestion(
+  $filter: ModelSubscriptionRoomQuestionFilterInput
+) {
+  onDeleteRoomQuestion(filter: $filter) {
+    id
+    roomId
+    text
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateRoomUser($filter: ModelSubscriptionRoomUserFilterInput) {
+  onCreateRoomUser(filter: $filter) {
+    id
+    userId
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateRoomUser($filter: ModelSubscriptionRoomUserFilterInput) {
+  onUpdateRoomUser(filter: $filter) {
+    id
+    userId
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteRoomUser($filter: ModelSubscriptionRoomUserFilterInput) {
+  onDeleteRoomUser(filter: $filter) {
+    id
+    userId
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onCreateRoom(filter: $filter) {
+    id
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onUpdateRoom(filter: $filter) {
+    id
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteRoom($filter: ModelSubscriptionRoomFilterInput) {
+  onDeleteRoom(filter: $filter) {
+    id
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateQuestion($filter: ModelSubscriptionQuestionFilterInput) {
+  onCreateQuestion(filter: $filter) {
+    id
+    text
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateQuestion($filter: ModelSubscriptionQuestionFilterInput) {
+  onUpdateQuestion(filter: $filter) {
+    id
+    text
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteQuestion($filter: ModelSubscriptionQuestionFilterInput) {
+  onDeleteQuestion(filter: $filter) {
+    id
+    text
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateUser($filter: ModelSubscriptionUserFilterInput) {
+  onCreateUser(filter: $filter) {
+    id
+    name
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateUser($filter: ModelSubscriptionUserFilterInput) {
+  onUpdateUser(filter: $filter) {
+    id
+    name
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteUser($filter: ModelSubscriptionUserFilterInput) {
+  onDeleteUser(filter: $filter) {
+    id
+    name
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateVote($filter: ModelSubscriptionVoteFilterInput) {
+  onCreateVote(filter: $filter) {
+    id
+    userId
+    roomId
+    questionId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateVote($filter: ModelSubscriptionVoteFilterInput) {
+  onUpdateVote(filter: $filter) {
+    id
+    userId
+    roomId
+    questionId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteVote($filter: ModelSubscriptionVoteFilterInput) {
+  onDeleteVote(filter: $filter) {
+    id
+    userId
+    roomId
+    questionId
+    createdAt
+    updatedAt
+  }
+}

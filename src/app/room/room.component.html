@@ -1,0 +1,17 @@
+<div class="container-fluid py-3">
+  <div class="row">
+    <div class="col">
+      <div class="question" *ngIf="questions?.items?.length">
+        <h1 class="text-center" *ngFor="let question of questions.items">{{question?.text}}</h1>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>Users Online:</h3>
+          <ul class="users" *ngIf="users?.items?.length">
+            <li *ngFor="let user of users.items">{{user?.userId}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

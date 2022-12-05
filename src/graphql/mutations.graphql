@@ -1,0 +1,211 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateRoomQuestion(
+  $input: CreateRoomQuestionInput!
+  $condition: ModelRoomQuestionConditionInput
+) {
+  createRoomQuestion(input: $input, condition: $condition) {
+    id
+    roomId
+    text
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateRoomQuestion(
+  $input: UpdateRoomQuestionInput!
+  $condition: ModelRoomQuestionConditionInput
+) {
+  updateRoomQuestion(input: $input, condition: $condition) {
+    id
+    roomId
+    text
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteRoomQuestion(
+  $input: DeleteRoomQuestionInput!
+  $condition: ModelRoomQuestionConditionInput
+) {
+  deleteRoomQuestion(input: $input, condition: $condition) {
+    id
+    roomId
+    text
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateRoomUser(
+  $input: CreateRoomUserInput!
+  $condition: ModelRoomUserConditionInput
+) {
+  createRoomUser(input: $input, condition: $condition) {
+    id
+    userId
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateRoomUser(
+  $input: UpdateRoomUserInput!
+  $condition: ModelRoomUserConditionInput
+) {
+  updateRoomUser(input: $input, condition: $condition) {
+    id
+    userId
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteRoomUser(
+  $input: DeleteRoomUserInput!
+  $condition: ModelRoomUserConditionInput
+) {
+  deleteRoomUser(input: $input, condition: $condition) {
+    id
+    userId
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateRoom(
+  $input: CreateRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  createRoom(input: $input, condition: $condition) {
+    id
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateRoom(
+  $input: UpdateRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  updateRoom(input: $input, condition: $condition) {
+    id
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteRoom(
+  $input: DeleteRoomInput!
+  $condition: ModelRoomConditionInput
+) {
+  deleteRoom(input: $input, condition: $condition) {
+    id
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateQuestion(
+  $input: CreateQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  createQuestion(input: $input, condition: $condition) {
+    id
+    text
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateQuestion(
+  $input: UpdateQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  updateQuestion(input: $input, condition: $condition) {
+    id
+    text
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteQuestion(
+  $input: DeleteQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  deleteQuestion(input: $input, condition: $condition) {
+    id
+    text
+    roomId
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  createUser(input: $input, condition: $condition) {
+    id
+    name
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  updateUser(input: $input, condition: $condition) {
+    id
+    name
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
+) {
+  deleteUser(input: $input, condition: $condition) {
+    id
+    name
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateVote(
+  $input: CreateVoteInput!
+  $condition: ModelVoteConditionInput
+) {
+  createVote(input: $input, condition: $condition) {
+    id
+    userId
+    roomId
+    questionId
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateVote(
+  $input: UpdateVoteInput!
+  $condition: ModelVoteConditionInput
+) {
+  updateVote(input: $input, condition: $condition) {
+    id
+    userId
+    roomId
+    questionId
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteVote(
+  $input: DeleteVoteInput!
+  $condition: ModelVoteConditionInput
+) {
+  deleteVote(input: $input, condition: $condition) {
+    id
+    userId
+    roomId
+    questionId
+    createdAt
+    updatedAt
+  }
+}

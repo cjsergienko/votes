@@ -1,0 +1,20 @@
+<form [formGroup]="questionForm">
+  <div class="container-fluid py-3">
+    <div class="row">
+      <div class="col h1">
+        What would you like to vote for?
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">your question:</label>
+        <input formControlName="question" type="text" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="Ask yes/no question">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center pt-4">
+        <button class="btn btn-sm btn-outline-primary" (click)="onCreateButtonClick()">Create a vote room</button>
+      </div>
+    </div>
+  </div>
+</form>
