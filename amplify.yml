@@ -2,9 +2,10 @@ version: 1
 frontend:
   phases:
     preBuild:
-      - npm i
-      - npm i -g @aws-amplify/cli
-      - amplifyPush --simple
+      commands:
+        - npm i
+        - npm i -g @aws-amplify/cli
+        - amplifyPush --simple
     # IMPORTANT - Please verify your build commands
     build:
       commands:
