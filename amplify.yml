@@ -9,7 +9,7 @@ frontend:
     preBuild:
       commands:
         - npm config set legacy-peer-deps true
-        - npm ci
+        - npm i
     # IMPORTANT - Please verify your build commands
     build:
       commands:
