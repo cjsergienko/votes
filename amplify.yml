@@ -15,6 +15,7 @@ frontend:
     # IMPORTANT - Please verify your build commands
     build:
       commands:
+        - yarn run build
         - yarn start
   artifacts:
     # IMPORTANT - Please verify your build output directory
