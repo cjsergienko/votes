@@ -1,4 +1,9 @@
 version: 1
+backend:
+  build:
+    phases:
+      commands:
+        - amplifyPush --simple
 frontend:
   phases:
     preBuild:
@@ -6,7 +11,6 @@ frontend:
         - npm config set legacy-peer-deps true
         - npm i
         - npm i -g @aws-amplify/cli
-        - amplifyPush --simple
     # IMPORTANT - Please verify your build commands
     build:
       commands:
