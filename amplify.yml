@@ -9,7 +9,9 @@ frontend:
     preBuild:
       commands:
         - npm config set legacy-peer-deps true
-        - npm i
+        - npm cache clean --force
+        - npm ci
+        - npm i -g @angular/cli@10.1.7
     # IMPORTANT - Please verify your build commands
     build:
       commands:
