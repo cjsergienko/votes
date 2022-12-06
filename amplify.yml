@@ -1,25 +1,24 @@
-version: 0.1
+version: 1
 backend:
-  phases:
-    build:
+  build:
+    phases:
       commands:
-        - '# Execute Amplify CLI with the helper script'
         - amplifyPush --simple
 frontend:
   phases:
     preBuild:
       commands:
-        - nvm use $VERSION_NODE_12
-        - npm ci
+        - npm config set legacy-peer-deps true
+        - npm i
+        - npm i -g @angular/cli@latest
+    # IMPORTANT - Please verify your build commands
     build:
       commands:
-        - nvm use $VERSION_NODE_12
-        - node -v
-        - npm run-script build
+        - ng serve
   artifacts:
-    baseDirectory: dist/cr-client
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /
     files:
       - '**/*'
   cache:
-    paths:
-      - node_modules/**/*
+    paths: []
