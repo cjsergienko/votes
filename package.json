@@ -1,5 +1,6 @@
 {
   "name": "votes",
+  "sideEffects": false,
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
