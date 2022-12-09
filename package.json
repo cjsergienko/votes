@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --watch=false",
+    "start": "ng serve --watch=true",
     "build": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
